@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Are The Best 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #ffe4ec 0%, #ffb6c1 60%, #ff8fb1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', 'Quicksand', system-ui, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .float-item {
+      position: absolute;
+      pointer-events: none;
+      animation: floatUp 9s infinite linear;
+      z-index: 1;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 0.7; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
+
+    .stage {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      background: rgba(255, 240, 245, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 3rem 2.5rem;
+      border-radius: 70px;
+      box-shadow: 0 25px 50px rgba(255, 105, 180, 0.4), 0 0 0 8px rgba(255, 255, 255, 0.6), 0 0 0 14px #ffb6c1;
+      max-width: 720px;
+      width: 90%;
+      animation: stagePop 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes stagePop {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .crown {
+      font-size: 4.5rem;
+      display: inline-block;
+      animation: crownBounce 1.6s infinite ease-in-out;
+      filter: drop-shadow(0 0 18px #ffd700);
+    }
+    @keyframes crownBounce {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-18px) rotate(3deg); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #c71585;
+      text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(199, 21, 133, 0.25);
+      margin: 0.5rem 0 0.3rem;
+      animation: heartbeatText 2s infinite;
+    }
+    @keyframes heartbeatText {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #d6457a;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.7);
+      border: 3px dashed #ff69b4;
+      border-radius: 40px;
+      padding: 1.8rem 1.5rem;
+      margin: 1.2rem 0;
+      font-size: 1.3rem;
+      color: #8a4b6b;
+      font-weight: 600;
+      line-height: 1.7;
+      animation: boxGlow 2s infinite alternate;
+    }
+    @keyframes boxGlow {
+      0% { box-shadow: 0 0 15px rgba(255, 105, 180, 0.4); }
+      100% { box-shadow: 0 0 35px rgba(255, 20, 147, 0.7); }
+    }
+
+    .message-box strong {
+      color: #c71585;
+      font-weight: 800;
+    }
+
+    .floating-hearts-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      font-size: 2rem;
+      margin: 1.2rem 0;
+    }
+    .floating-hearts-row span {
+      display: inline-block;
+      animation: heartFloat 2.2s infinite ease-in-out;
+    }
+    .floating-hearts-row span:nth-child(2) { animation-delay: 0.3s; }
+    .floating-hearts-row span:nth-child(3) { animation-delay: 0.6s; }
+    .floating-hearts-row span:nth-child(4) { animation-delay: 0.9s; }
+    .floating-hearts-row span:nth-child(5) { animation-delay: 1.2s; }
+    @keyframes heartFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-14px) scale(1.15); }
+    }
+
+    .happy-bday {
+      margin-top: 1.2rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 0.7rem 2rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      box-shadow: 0 8px 0 #c71585, 0 12px 25px rgba(255, 20, 147, 0.5);
+      animation: bdayPulse 1.8s infinite alternate;
+    }
+    @keyframes bdayPulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.06); }
+    }
+
+    @media (max-width: 550px) {
+      .stage { padding: 2rem 1.2rem; border-radius: 45px; }
+      h1 { font-size: 2rem; }
+      .subtitle { font-size: 1.15rem; }
+      .message-box { font-size: 1rem; padding: 1.2rem 1rem; }
+      .crown { font-size: 3rem; }
+      .happy-bday { font-size: 1.4rem; padding: 0.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="crown">👑</div>
+    <h1>You Are The Best</h1>
+    <div class="subtitle">and I hope you're having the best birthday 💖</div>
+
+    <div class="message-box">
+      You deserve <strong>every good thing</strong> in this world.<br>
+      Today is your day — <strong>enjoy every second</strong> of it.<br>
+      I'm so lucky to call you mine. 🥰
+    </div>
+
+    <div class="floating-hearts-row">
+      <span>💖</span><span>💕</span><span>💗</span><span>💓</span><span>💝</span>
+    </div>
+
+    <div class="happy-bday">🎉 Happy Birthday, Jess! 🎉</div>
+  </div>
+
+  <script>
+    (function() {
+      const items = ['💖', '💕', '💗', '✨', '🌸', '💓', '🌺', '💝', '🎀', '💞'];
+      const body = document.body;
+      for (let i = 0; i < 24; i++) {
+        const el = document.createElement('div');
+        el.classList.add('float-item');
+        el.textContent = items[Math.floor(Math.random() * items.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.fontSize = (1.2 + Math.random() * 1.8) + 'rem';
+        const dur = 7 + Math.random() * 9;
+        el.style.animationDuration = dur + 's';
+        el.style.animationDelay = -(Math.random() * dur) + 's';
+        body.appendChild(el);
+      }
+    })();
+  </script>
+</body>
+</html>
